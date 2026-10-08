@@ -2,15 +2,15 @@
    CSS Variables (Design System)
    ========================================================================== */
    :root {
-    /* Colors - Pink Luxury Palette */
-    --color-primary: #b67180; /* Dusty rose */
-    --color-primary-dark: #9a5e6b;
-    --color-secondary: #fdf2f4; /* Blush/Light pink */
-    --color-bg: #ffffff; /* White */
-    --color-bg-alt: #faf9f9; /* Cream/Off-white */
-    --color-text: #332d2e; /* Dark text */
-    --color-text-light: #665b5d;
-    --color-border: #ebd5d9;
+    /* Colors - High-End Nail Salon Palette */
+    --color-primary: #b76e79; /* Rose gold / Muted blush pink */
+    --color-primary-dark: #995c65; /* Darker rose gold */
+    --color-secondary: #f9e8ea; /* Soft blush */
+    --color-bg: #fdfbf7; /* Soft cream */
+    --color-bg-alt: #f4f1ea; /* Slightly darker cream/off-white */
+    --color-text: #2d2d2d; /* Dark charcoal */
+    --color-text-light: #595959; /* Medium charcoal */
+    --color-border: #e8dcd0; /* Warm border */
     --color-white: #ffffff;
 
     /* Typography */
