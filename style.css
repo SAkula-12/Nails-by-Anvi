@@ -279,7 +279,7 @@ ul {
     justify-content: center;
     text-align: center;
     background: linear-gradient(rgba(255,255,255,0.8), rgba(253,242,244,0.9)), 
-                url('images/hero_bg.png') center top/contain no-repeat #fdf2f4;
+                url('images/hero_bg.jpg') center top/contain no-repeat #fdf2f4;
     padding: 0 var(--space-md);
     margin-top: 60px; /* Offset for fixed header */
 }
