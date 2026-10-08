@@ -78,24 +78,12 @@ Design: ${design}
             });
         }
 
-        // Redirect back to the site with a success message
-        res.send(`
-            <div style="text-align: center; font-family: sans-serif; padding-top: 50px;">
-                <h2 style="color: #4CAF50;">Appointment requested successfully!</h2>
-                <p>We've sent you a confirmation text and will reach out soon.</p>
-                <a href="/" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #B5838D; color: white; text-decoration: none; border-radius: 5px;">Return Home</a>
-            </div>
-        `);
+        // Send JSON response for AJAX
+        res.status(200).json({ message: 'Appointment requested successfully!' });
 
     } catch (error) {
         console.error('Error processing booking:', error);
-        res.status(500).send(`
-            <div style="text-align: center; font-family: sans-serif; padding-top: 50px;">
-                <h2 style="color: #f44336;">There was an error processing your request.</h2>
-                <p>Please try again later or contact us directly.</p>
-                <a href="/" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #B5838D; color: white; text-decoration: none; border-radius: 5px;">Return Home</a>
-            </div>
-        `);
+        res.status(500).json({ error: 'There was an error processing your request. Please try again later.' });
     }
 });
 

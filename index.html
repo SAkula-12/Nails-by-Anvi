@@ -232,7 +232,11 @@
 
                     <!-- Mock Booking Form -->
                     <div class="booking-form-wrapper">
-                        <form class="booking-form" action="#" method="POST" aria-label="Appointment Request Form">
+                        <div id="booking-success" style="display: none; text-align: center; padding: 40px 20px;">
+                            <h3 style="color: var(--color-primary); margin-bottom: 10px;">Thank You!</h3>
+                            <p>Please check your messages for a confirmation.</p>
+                        </div>
+                        <form class="booking-form" id="appointment-form" action="/api/book" method="POST" enctype="multipart/form-data" aria-label="Appointment Request Form">
                             <div class="form-group">
                                 <label for="name">Full Name <span class="required">*</span></label>
                                 <input type="text" id="name" name="name" required aria-required="true"
@@ -343,6 +347,40 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById('appointment-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Disable button and show loading text
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                });
+
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('booking-success').style.display = 'block';
+                } else {
+                    alert('There was an error sending your request. Please try again.');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                }
+            } catch (error) {
+                alert('Could not connect to the server. Make sure the backend server is running.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
+        });
+    </script>
 </body>
 
 </html>
