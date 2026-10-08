@@ -58,8 +58,7 @@
         <section class="about section-padding" id="about" aria-labelledby="about-title">
             <div class="container about-grid">
                 <div class="about-image">
-                    <!-- Placeholder image for Anvi or salon setting -->
-                    <img src="https://images.unsplash.com/photo-1632832860714-d03541bdc60b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nail artist working on intricate nail design" loading="lazy">
+                    <img src="images/about_anvi.png" alt="Portrait of Anvi, the nail artist" loading="lazy">
                 </div>
                 <div class="about-text">
                     <h2 id="about-title" class="section-title">About Anvi</h2>
@@ -214,8 +213,7 @@
 
                     <!-- Mock Booking Form -->
                     <div class="booking-form-wrapper">
-                        <form class="booking-form" action="https://formsubmit.co/akula.anvitha16@gmail.com" method="POST" enctype="multipart/form-data" aria-label="Appointment Request Form">
-                            <input type="hidden" name="_subject" value="New Appointment Request - Nails by Anvi">
+                        <form class="booking-form" action="/api/book" method="POST" enctype="multipart/form-data" aria-label="Appointment Request Form">
                             <div class="form-group">
                                 <label for="name">Full Name <span class="required">*</span></label>
                                 <input type="text" id="name" name="name" required aria-required="true" placeholder="Your name">
