@@ -429,7 +429,7 @@ ul {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/5;
     cursor: pointer;
 }
 
@@ -710,6 +710,3 @@ ul {
     }
 }
 
-/* Custom Zoom for Gallery Images 5 and 6 */
-#gallery-img-5, #gallery-img-6 { transform: scale(1.15); }
-.gallery-item:hover #gallery-img-5, .gallery-item:hover #gallery-img-6 { transform: scale(1.22); }
