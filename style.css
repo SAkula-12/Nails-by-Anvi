@@ -709,3 +709,7 @@ ul {
         padding: var(--space-lg) 0;
     }
 }
+
+/* Custom Zoom for Gallery Images 5 and 6 */
+#gallery-img-5, #gallery-img-6 { transform: scale(1.15); }
+.gallery-item:hover #gallery-img-5, .gallery-item:hover #gallery-img-6 { transform: scale(1.22); }
